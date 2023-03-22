@@ -2,8 +2,8 @@
 <template>
   <!-- body -->
   <div class="form-register">
-    <div class="d-flex justify-content-center">
-      <h2>Register for more</h2>
+    <div class="text-center">
+      <h1 class="font-medium text-2xl lg:text-3xl mb-4">Register for more</h1>
     </div>
     <div class="d-flex justify-content-around">
       <input
@@ -56,7 +56,7 @@
     </div>
     <a
       href="#"
-      class="text-black text-end d-block"
+      class="text-black text-end d-block m-2"
       style="margin-top: -10px; margin-right: 20px"
       >Need help?</a
     >
@@ -110,3 +110,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+input {
+  margin: 10px 4px;
+}
+</style>

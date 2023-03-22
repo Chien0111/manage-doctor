@@ -1,170 +1,179 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
-    <fieldset style="width: 103%">
-      <legend><h5>Patient Infomation</h5></legend>
-      <div class="fieldset-content">
-        <div class="flex flex-wrap">
-          <div>
-            <span>Full Name:</span>
-            <AutoComplete
-              v-model="queueDetails"
-              :suggestions="filteredPatients"
-              @complete="searchPatient($event)"
-              optionLabel="user.fullName"
-            />
-          </div>
-          <div>
-            <span> DoB:</span>
-            <InputText
-              type="date"
-              v-model="queue.birthDay"
-              readonly
-              class="form-control"
-            />
-          </div>
-          <div>
-            <span> Gender:</span>
-            <InputText
-              type="text"
-              v-model="queue.gender"
-              readonly
-              class="form-control"
-            />
-          </div>
-          <div class="address">
-            <span> Address:</span>
-            <InputText
-              type="text"
-              v-model="queue.address"
-              readonly
-              class="form-control"
-            />
-          </div>
-          <div class="phone">
-            <span>Phone Number:</span>
-            <InputText
-              type="text"
-              v-model="queue.phoneNumber"
-              readonly
-              class="form-control"
-            />
-          </div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div class="me-2">
-            <span>Pulse:</span>
-            <InputNumber
-              inputId="withoutgrouping"
-              v-model="inputQueue.Pulse"
-              mode="decimal"
-              :useGrouping="false"
-              placeholder="bpm"
-              class="form-control"
-              style="width: 195px"
-            />
-          </div>
-          <div class="me-2">
-            <span> Blood Pressure:</span>
-            <InputNumber
-              inputId="withoutgrouping"
-              v-model="inputQueue.BloodPressure"
-              mode="decimal"
-              :useGrouping="false"
-              placeholder="mmHg"
-              class="form-control"
-            />
-          </div>
-          <div class="me-2">
-            <span>Temperature:</span>
-            <InputNumber
-              inputId="withoutgrouping"
-              v-model="inputQueue.Tempurature"
-              mode="decimal"
-              :useGrouping="false"
-              placeholder="°C"
-              class="form-control"
-            />
-          </div>
-          <div class="me-2">
-            <span> Weight:</span>
-            <InputNumber
-              inputId="withoutgrouping"
-              v-model="inputQueue.Weight"
-              mode="decimal"
-              :useGrouping="false"
-              placeholder="Kg"
-              class="form-control"
-            />
-          </div>
-          <div class="me-2" style="width: 190px">
-            Height:
-            <InputNumber
-              inputId="withoutgrouping"
-              v-model="inputQueue.Height"
-              mode="decimal"
-              :useGrouping="false"
-              placeholder="Cm"
-              class="form-control"
-            />
-          </div>
-          <div>
-            Doctor:
-            <Dropdown
-              v-model="doctor.doctorId"
-              :options="doctors"
-              optionValue="id"
-              optionLabel="fullName"
-              placeholder="Select a Doctor"
-              class="form-control"
-            />
-          </div>
-        </div>
-      </div>
-    </fieldset>
-  </div>
-  <div class="mt-3">
-    <div class="d-flex">
-      <div class="col-md-8" style="margin-right: 18px">
-        <fieldset style="width: 102%">
-          <legend>
-            <div class="d-flex justify-content-between align-items-center">
-              <h5>Doctor's Appoitment</h5>
-              <div>
-                <Dropdown
-                  v-model="idDoctor"
-                  :options="doctors"
-                  optionValue="id"
-                  optionLabel="fullName"
-                  placeholder="Select a Doctor"
-                />
-              </div>
+    <div>
+      <fieldset style="width: 103%">
+        <legend><h5>Patient Infomation</h5></legend>
+        <div class="fieldset-content">
+          <div class="flex flex-wrap">
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span>Full Name:</span>
+              <InputText
+                type="text"
+                v-model="queueDetails"
+                :suggestions="filteredPatients"
+                @complete="searchPatient($event)"
+                optionLabel="user.fullName"
+                class="form-control w-full"
+              />
+              <!-- <AutoComplete
+                v-model="queueDetails"
+                :suggestions="filteredPatients"
+                @complete="searchPatient($event)"
+                optionLabel="user.fullName"
+              /> -->
             </div>
-          </legend>
-          <div class="fieldset-content" style="height: 700px">
-            <FullCalendar :options="calendarOptions" />
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> DoB:</span>
+              <InputText
+                type="date"
+                v-model="queue.birthDay"
+                readonly
+                class="form-control"
+              />
+            </div>
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> Gender:</span>
+              <InputText
+                type="text"
+                v-model="queue.gender"
+                readonly
+                class="form-control"
+              />
+            </div>
+            <div class="address m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> Address:</span>
+              <InputText
+                type="text"
+                v-model="queue.address"
+                readonly
+                class="form-control"
+              />
+            </div>
+            <div class="phone m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span>Phone Number:</span>
+              <InputText
+                type="text"
+                v-model="queue.phoneNumber"
+                readonly
+                class="form-control"
+              />
+            </div>
           </div>
-        </fieldset>
-      </div>
-      <div class="col-md-4 ms-2">
-        <div>
-          <fieldset style="width: 103%">
+          <div class="flex flex-wrap">
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span>Pulse:</span>
+              <InputNumber
+                inputId="withoutgrouping"
+                v-model="inputQueue.Pulse"
+                mode="decimal"
+                :useGrouping="false"
+                placeholder="bpm"
+                class="form-control"
+              />
+            </div>
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> Blood Pressure:</span>
+              <InputNumber
+                inputId="withoutgrouping"
+                v-model="inputQueue.BloodPressure"
+                mode="decimal"
+                :useGrouping="false"
+                placeholder="mmHg"
+                class="form-control"
+              />
+            </div>
+            <div class="m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span>Temperature:</span>
+              <InputNumber
+                inputId="withoutgrouping"
+                v-model="inputQueue.Tempurature"
+                mode="decimal"
+                :useGrouping="false"
+                placeholder="°C"
+                class="form-control"
+              />
+            </div>
+            <div class="address m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> Weight:</span>
+              <InputNumber
+                inputId="withoutgrouping"
+                v-model="inputQueue.Weight"
+                mode="decimal"
+                :useGrouping="false"
+                placeholder="Kg"
+                class="form-control"
+              />
+            </div>
+            <div class="phone m-2 w-full xl:w-1/6 sm:w-1/4">
+              <span> Height: </span>
+              <InputNumber
+                inputId="withoutgrouping"
+                v-model="inputQueue.Height"
+                mode="decimal"
+                :useGrouping="false"
+                placeholder="Cm"
+                class="form-control"
+              />
+            </div>
+            <div class="phone m-2 w-full xl:w-1/6 sm:w-1/4">
+              <div>Doctor:</div>
+              <Dropdown
+                v-model="doctor.doctorId"
+                :options="doctors"
+                optionValue="id"
+                optionLabel="fullName"
+                placeholder="Select a Doctor"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="mt-3">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-3/5 m-4">
+          <fieldset style="width: 102%">
             <legend>
-              <div
-                class="d-flex justify-content-between align-items-center"
-                style="height: 44px"
-              >
-                <h5>Queue Ticket</h5>
-                <a href="" style="text-decoration: none; color: black">
-                  <i class="fa-solid fa-print"></i>
-                </a>
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>Doctor's Appoitment</h5>
+                <div>
+                  <Dropdown
+                    v-model="idDoctor"
+                    :options="doctors"
+                    optionValue="id"
+                    optionLabel="fullName"
+                    placeholder="Select a Doctor"
+                  />
+                </div>
               </div>
             </legend>
-            <div class="fieldset-content" style="height: 300px"></div>
+            <div class="fieldset-content">
+              <FullCalendar :options="calendarOptions" />
+            </div>
           </fieldset>
         </div>
-        <div class="text-center mt-2">
-          <Button label="Transfer Patient" @click="createQueue" />
+        <div class="w-full md:w-[420px] m-4">
+          <div>
+            <fieldset style="width: 103%">
+              <legend>
+                <div
+                  class="d-flex justify-content-between align-items-center"
+                  style="height: 44px"
+                >
+                  <h5>Queue Ticket</h5>
+                  <a href="" style="text-decoration: none; color: black">
+                    <i class="fa-solid fa-print"></i>
+                  </a>
+                </div>
+              </legend>
+              <div class="fieldset-content" style="height: 300px"></div>
+            </fieldset>
+          </div>
+          <div class="text-center mt-2">
+            <Button label="Transfer Patient" @click="createQueue" />
+          </div>
         </div>
       </div>
     </div>

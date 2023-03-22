@@ -1,89 +1,91 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="banner">
-    <img :src="require('@/assets/image/Rectangle1146.jpg')" />
-    <p class="text1">The best solution</p>
-    <p class="text2">for all your health needs.</p>
-  </div>
-  <div class="body-title container">
-    <h1 class="text-center mt-4 mb-4">Why should you choose EGO?</h1>
-  </div>
-  <div class="body-content">
-    <div class="d-flex justify-content-between container">
-      <div class="square d-flex flex-column align-items-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <img
-            src="../assets/image/Vector.png"
-            height="180px"
-            class="hexagon position-absolute"
-          />
-          <img
-            src="../assets/image/Group.png"
-            class="hexagon position-absolute"
-          />
+  <div>
+    <div class="banner">
+      <img :src="require('@/assets/image/Rectangle1146.jpg')" />
+      <p class="text1">The best solution</p>
+      <p class="text2">for all your health needs.</p>
+    </div>
+    <div class="body-title container text-3xl font-medium">
+      <h1 class="text-center mt-4 mb-4">Why should you choose EGO?</h1>
+    </div>
+    <div class="body-content">
+      <div class="flex flex-wrap justify-center">
+        <div class="square d-flex flex-column align-items-center m-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="../assets/image/Vector.png"
+              height="180px"
+              class="hexagon position-absolute"
+            />
+            <img
+              src="../assets/image/Group.png"
+              class="hexagon position-absolute"
+            />
+          </div>
+          <div class="mt-auto mb-5 d-flex justify-content-center">
+            <button>See Details</button>
+          </div>
         </div>
-        <div class="mt-auto mb-5 d-flex justify-content-center">
-          <button>See Details</button>
+        <div class="square d-flex flex-column align-items-center m-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="../assets/image/Vector.png"
+              height="180px"
+              class="hexagon position-absolute"
+            />
+            <img
+              src="../assets/image/Plurginphone.png"
+              class="hexagon position-absolute"
+            />
+          </div>
+          <div class="mt-auto mb-5 d-flex justify-content-center">
+            <button>See Details</button>
+          </div>
         </div>
-      </div>
-      <div class="square d-flex flex-column align-items-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <img
-            src="../assets/image/Vector.png"
-            height="180px"
-            class="hexagon position-absolute"
-          />
-          <img
-            src="../assets/image/Plurginphone.png"
-            class="hexagon position-absolute"
-          />
+        <div class="square d-flex flex-column align-items-center m-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="../assets/image/Vector.png"
+              height="180px"
+              class="hexagon position-absolute"
+            />
+            <img
+              src="../assets/image/Khien.png"
+              class="hexagon position-absolute"
+            />
+          </div>
+          <div class="mt-auto mb-5 d-flex justify-content-center">
+            <button>See Details</button>
+          </div>
         </div>
-        <div class="mt-auto mb-5 d-flex justify-content-center">
-          <button>See Details</button>
-        </div>
-      </div>
-      <div class="square d-flex flex-column align-items-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <img
-            src="../assets/image/Vector.png"
-            height="180px"
-            class="hexagon position-absolute"
-          />
-          <img
-            src="../assets/image/Khien.png"
-            class="hexagon position-absolute"
-          />
-        </div>
-        <div class="mt-auto mb-5 d-flex justify-content-center">
-          <button>See Details</button>
-        </div>
-      </div>
-      <div class="square d-flex flex-column align-items-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <img
-            src="../assets/image/Vector.png"
-            height="180px"
-            class="hexagon position-absolute"
-          />
-          <img
-            src="../assets/image/PlurginPricelist.png"
-            class="hexagon position-absolute"
-          />
-        </div>
-        <div class="mt-auto mb-5 d-flex justify-content-center">
-          <button>See Details</button>
+        <div class="square d-flex flex-column align-items-center m-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="../assets/image/Vector.png"
+              height="180px"
+              class="hexagon position-absolute"
+            />
+            <img
+              src="../assets/image/PlurginPricelist.png"
+              class="hexagon position-absolute"
+            />
+          </div>
+          <div class="mt-auto mb-5 d-flex justify-content-center">
+            <button>See Details</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="body-title container">
-    <h1 class="text-center mt-4">The best service at EGO</h1>
-    <h5>We want to bring you the best healthcare experience</h5>
-  </div>
-  <div class="body-service container">
-    <div class="row justify-content-center">
-      <div class="col-md-5 mb-5">
-        <div class="card" style="width: 30rem">
+    <div class="body-title container">
+      <h1 class="text-center mt-4 text-3xl font-medium">
+        The best service at EGO
+      </h1>
+      <h5>We want to bring you the best healthcare experience</h5>
+    </div>
+    <div class="body-service container mb-10">
+      <div class="flex flex-wrap justify-center">
+        <div class="card md:w-[540px] w-full h-[300px]">
           <div class="card_image">
             <img
               class="card-img-top"
@@ -98,9 +100,7 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card" style="width: 30rem">
+        <div class="card md:w-[540px] w-full h-[300px]">
           <div class="card_image">
             <img
               class="card-img-top"
@@ -115,9 +115,7 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card" style="width: 30rem">
+        <div class="card md:w-[540px] w-full h-[300px]">
           <div class="card_image">
             <img
               class="card-img-top"
@@ -132,9 +130,7 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card" style="width: 30rem">
+        <div class="card md:w-[540px] w-full h-[300px]">
           <div class="card_image">
             <img
               class="card-img-top"

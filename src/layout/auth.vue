@@ -1,31 +1,34 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <Toast />
-  <ConfirmDialog></ConfirmDialog>
-  <header-component />
-  <div class="container mb-5">
-    <div class="row">
-      <!-- Form Left -->
-      <div class="form-left col-sm-2 mt-4">
-        <h1>Sign up to track your health</h1>
-        <p>
-          if you have ready an account you can
-          <a href="#" class="Login-text" target="_blank">Login </a>here. Or
-          <a href="#" class="Login-text" target="_blank">Register </a>to join
-          with us
-        </p>
-        <div class="text-span"></div>
-      </div>
-      <!-- Form Center -->
-      <div class="col-sm-4 form-center">
-        <img
-          src="@/assets/image/3636112-removebg-preview1.png"
-          alt=""
-          class="img-form-center"
-        />
-      </div>
-      <div class="col-sm-4">
-        <slot />
+  <div>
+    <Toast />
+    <ConfirmDialog></ConfirmDialog>
+    <header-component />
+    <div class="">
+      <div class="lg:flex justify-around m-6 relative">
+        <div class="xl:text-3xl lg:text-2xl text-xl text-center lg:mt-24">
+          <h1 class="lg:text-left lg:text-4xl font-medium mb-4">
+            Sign up to track your health
+          </h1>
+          <p class="lg:text-left lg:w-2/3">
+            if you have ready an account you can
+            <a href="#" class="Login-text" target="_blank">Login </a>here. Or
+            <a href="#" class="Login-text" target="_blank">Register </a>to join
+            with us
+          </p>
+          <div class="text-span w-[240px] h-[240px]"></div>
+        </div>
+        <!-- Form Center -->
+        <div class="hidden lg:block absolute top-80">
+          <img
+            src="@/assets/image/3636112-removebg-preview1.png"
+            alt=""
+            class="w-[300px] h-[300px]"
+          />
+        </div>
+        <div class="lg:w-1/3 w-full">
+          <slot />
+        </div>
       </div>
     </div>
   </div>

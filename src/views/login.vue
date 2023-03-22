@@ -1,9 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <!-- Form Right -->
-  <div class="form-login">
+  <div class="m-4">
     <div class="d-flex justify-content-center">
-      <h2>Sign In</h2>
+      <h2 class="lg:text-4xl text-3xl m-4">Sign In</h2>
     </div>
     <input type="text" v-model="loginData.userName" placeholder="Email" />
     <input
@@ -13,7 +13,7 @@
     />
     <a
       href="#"
-      class="text-black text-end d-block"
+      class="text-black text-end d-block m-2"
       style="margin-top: -10px; margin-right: 20px"
       >Need help?</a
     >
