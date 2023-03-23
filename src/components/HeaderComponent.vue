@@ -45,11 +45,10 @@
                     >
                   </div>
                   <div class="nav-item m-4">
-                    <a
-                      href="#"
-                      class="nav-link text-white"
-                      @click="() => handleDrop('item')"
-                      >Our Doctor</a
+                    <router-link
+                      :to="{ name: 'Doctor', params: {} }"
+                      class="nav-link"
+                      >Our Doctor</router-link
                     >
                   </div>
                   <div class="nav-item m-4">
@@ -124,7 +123,11 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Our Doctor</a>
+                <router-link
+                  :to="{ name: 'Doctor', params: {} }"
+                  class="nav-link"
+                  >Our Doctor</router-link
+                >
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">About Us</a>
@@ -192,11 +195,8 @@
               >
             </div>
             <div class="nav-item m-4">
-              <a
-                href="#"
-                class="nav-link text-white"
-                @click="() => handleDrop('item')"
-                >Our Doctor</a
+              <router-link :to="{ name: 'Doctor', params: {} }" class="nav-link"
+                >Our Doctor</router-link
               >
             </div>
             <div class="nav-item m-4">
