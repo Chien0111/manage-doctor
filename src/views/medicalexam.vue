@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
-    <div class="container d-flex">
-      <div class="col-md-2" style="margin-right: 5px">
+    <div class="flex flex-wrap xl:flex-nowrap justify-center">
+      <div class="w-full xl:w-[240px]" style="margin-right: 5px">
         <div class="mb-3">
           <Listbox
             v-model="selectedPatient"
@@ -69,14 +69,14 @@
           </div>
         </div>
       </div>
-      <div class="col-md-10">
+      <div class="w-full xl:w-4/5">
         <div class="mb-3" style="width: 104%">
           <fieldset>
             <legend><h5>Patient Health Tracking Status</h5></legend>
             <div class="fieldset-content">
-              <div class="d-flex justify-content-between">
+              <div class="d-flex justify-content-between flex-wrap">
                 <div>
-                  <span> Full Name: </span>
+                  <span> Full Name:</span>
                   <InputText
                     v-model="patientHealthTracking.patient.user.fullName"
                     type="text"
@@ -121,7 +121,7 @@
                   />
                 </div>
               </div>
-              <div class="d-flex justify-content-between">
+              <div class="d-flex justify-content-between flex-wrap">
                 <div>
                   <span>Pulse:</span>
                   <InputNumber
@@ -185,21 +185,23 @@
         <div class="mb-3" style="width: 104%">
           <fieldset style="height: 550px">
             <legend>
-              <div class="d-flex justify-content-between align-items-center">
-                <h5>Presciption</h5>
-                <div class="d-flex justify-content-center align-items-center">
-                  <h5 class="me-2">Using Day.</h5>
-                  <InputNumber mode="decimal" :min="0" :max="100" />
+              <h1 class="w-full mb-4 text-3xl">Presciption:</h1>
+              <div
+                class="d-flex flex-wrap justify-content-between align-items-center"
+              >
+                <div class="lg:w-1/3">
+                  <h5 class="me-2">Using Day</h5>
+                  <InputNumber mode="decimal" class="w-full m-2" />
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center">
+                <div class="lg:w-1/3">
                   <h5 class="me-2">Re-Examination day</h5>
-                  <Calendar dateFormat="mm-dd-yy" />
+                  <Calendar dateFormat="mm-dd-yy" class="w-full m-2" />
                 </div>
                 <div>
                   <Button
                     label="Clear Presciption"
-                    class="p-button-rounded p-button-danger"
+                    class="p-button-rounded p-button-danger my-2"
                     @click="emptyMedicineInPrescription()"
                   />
                 </div>

@@ -15,24 +15,24 @@
       Main
     </p>
 
-    <ul class="nav flex-column bg-white mb-0">
-      <li class="nav-item">
-        <a href="#" class="nav-link text-dark font-italic bg-light">
-          <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+    <ul class="nav flex-column mb-0">
+      <li class="nav-item hover:bg-[#f4d7d3]">
+        <a href="#" class="nav-link text-dark font-italic">
+          <i class="fa fa-th-large mr-3 fa-fw"></i>
           Home
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item hover:bg-[#f4d7d3]">
         <router-link
           :to="{ name: 'Dashboard', params: {} }"
           class="nav-link text-dark font-italic"
         >
-          <i class="fa-solid fa-gauge"></i>
+          <i class="fa-solid fa-gauge mr-3"></i>
           Dashboard
         </router-link>
       </li>
       <div v-if="role === 'Admin'">
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Medicine', params: {} }"
             class="nav-link text-dark font-italic"
@@ -41,7 +41,7 @@
             Medicine Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Patient', params: {} }"
             class="nav-link text-dark font-italic"
@@ -50,7 +50,7 @@
             Patient Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Doctor', params: {} }"
             class="nav-link text-dark font-italic"
@@ -59,7 +59,7 @@
             Doctor Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Nurse', params: {} }"
             class="nav-link text-dark font-italic"
@@ -68,7 +68,7 @@
             Nurse Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Service', params: {} }"
             class="nav-link text-dark font-italic"
@@ -77,7 +77,7 @@
             Service Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Invoice', params: {} }"
             class="nav-link text-dark font-italic"
@@ -86,7 +86,7 @@
             Invoice Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Test', params: {} }"
             class="nav-link text-dark font-italic"
@@ -95,7 +95,7 @@
             Test Manage
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'Prescription', params: {} }"
             class="nav-link text-dark font-italic"
@@ -106,7 +106,7 @@
         </li>
       </div>
       <div v-else-if="role === 'Doctor'">
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'MedicalExam', params: {} }"
             class="nav-link text-dark font-italic"
@@ -115,7 +115,7 @@
             Medical Exam
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'DoctorAppointment', params: {} }"
             class="nav-link text-dark font-italic"
@@ -126,7 +126,7 @@
         </li>
       </div>
       <div v-else>
-        <li class="nav-item">
+        <li class="nav-item hover:bg-[#f4d7d3]">
           <router-link
             :to="{ name: 'ReceivePatient', params: {} }"
             class="nav-link text-dark font-italic"

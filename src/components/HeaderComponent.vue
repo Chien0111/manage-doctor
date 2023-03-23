@@ -84,7 +84,11 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Our Doctor</a>
+                <router-link
+                  :to="{ name: 'Doctor', params: {} }"
+                  class="nav-link"
+                  >Our Doctor</router-link
+                >
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">About Us</a>

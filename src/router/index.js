@@ -110,6 +110,18 @@ const routes = [
     //beforeEnter: [requireLogin, ifHaveNotRole],
   },
   {
+    path: "/OurDoctor",
+    name: "OurDoctor",
+    meta: {
+      layout: "default",
+    },
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import("../views/ourdoctor.vue"),
+    //beforeEnter: [requireLogin, ifHaveNotRole],
+  },
+  {
     path: "/DoctorAppointment",
     name: "DoctorAppointment",
     meta: {

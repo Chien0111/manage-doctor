@@ -183,6 +183,7 @@
         icon="pi pi-check"
         @click="handleSubmit()"
         autofocus
+        class="text-sky-600 hover:bg-sky-600"
       />
     </template>
   </Dialog>
@@ -351,5 +352,8 @@ export default {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+.p-inputgroup {
+  margin: 8px 0;
 }
 </style>

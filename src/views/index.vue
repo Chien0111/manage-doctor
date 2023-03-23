@@ -83,70 +83,78 @@
       </h1>
       <h5>We want to bring you the best healthcare experience</h5>
     </div>
-    <div class="body-service container mb-10">
-      <div class="flex flex-wrap justify-center">
-        <div class="card md:w-[540px] w-full h-[300px]">
-          <div class="card_image">
-            <img
-              class="card-img-top"
-              :src="require('@/assets/image/Rectangle1152.png')"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
+    <div class="flex justify-center flex-wrap">
+      <div
+        v-for="item in dataService"
+        :key="item"
+        class="flex items-center justify-around border-[1px] border-t-zinc-300 rounded-lg p-6 shadow-card w-[360px] m-4"
+      >
+        <div>
+          <h1 class="font-medium text-2xl">{{ item.title }}</h1>
+          <ul>
+            <li class="my-4">
+              <font-awesome-icon
+                :icon="['fass', 'circle']"
+                class="text-[6px]"
+              />
+              {{ item.content }}
+            </li>
+          </ul>
+          <button>+ more</button>
         </div>
-        <div class="card md:w-[540px] w-full h-[300px]">
-          <div class="card_image">
-            <img
-              class="card-img-top"
-              :src="require('@/assets/image/Rectangle1153.png')"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card md:w-[540px] w-full h-[300px]">
-          <div class="card_image">
-            <img
-              class="card-img-top"
-              :src="require('@/assets/image/Rectangle1154.png')"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card md:w-[540px] w-full h-[300px]">
-          <div class="card_image">
-            <img
-              class="card-img-top"
-              :src="require('@/assets/image/Rectangle1155.png')"
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
+        <div>
+          <font-awesome-icon :icon="['fas', 'syringe']" class="text-4xl" />
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+import { ref } from "vue";
+export default {
+  setup() {
+    const dataService = ref([
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+      {
+        title: "Addiction Medicine",
+        content: "Confidential counseling",
+      },
+    ]);
+    return {
+      dataService,
+    };
+  },
+};
+</script>
 <style scoped src="../assets/style/home.css"></style>
