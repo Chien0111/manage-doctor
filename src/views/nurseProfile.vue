@@ -14,6 +14,17 @@
         <!-- Profile editing form -->
         <form @submit.prevent="handleSubmit">
           <div class="form-group">
+            <div class="flex justify-center">
+              <div
+                class="lg:w-[200px] lg:h-[200px] w-[150px] h-[150px] border-[1px] rounded-full m-6"
+              >
+                <img
+                  src="https://vnn-imgs-f.vgcloud.vn/2020/03/23/11/trend-avatar-1.jpg"
+                  class="object-cover w-full h-full rounded-full"
+                  alt=""
+                />
+              </div>
+            </div>
             <h3>
               Nurse {{ nurseInfo.user.firstName }}
               {{ nurseInfo.user.lastName }} Profile Settings
@@ -131,17 +142,19 @@
                     v-model="nurseInfo.experience"
                   />
                 </div>
-                <div class="col-md-6 mb-3">
-                  <Button
-                    label="Save changes"
-                    class="p-button-raised p-button-primary"
-                    @click="handleSubmit(this.doctorInfo.id)"
-                  />
-                  <Button
-                    label="Back to Home "
-                    class="p-button-raised p-button-danger"
+                <div class="d-flex justify-content-end">
+                  <button
+                    class="btn btn-primary bg-white text-purple-600 px-4 border-[1px] border-purple-600 mr-4 rounded-lg hover:text-gray-400"
                     @click="back2home()"
-                  />
+                  >
+                    Back To Home
+                  </button>
+                  <button
+                    class="btn btn-primary bg-purple-500 border-none hover:bg-purple-600 text-white px-4"
+                    @click="handleSubmit(this.doctorInfo.id)"
+                  >
+                    Save Changes
+                  </button>
                 </div>
               </div>
             </div>

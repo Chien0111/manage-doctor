@@ -7,6 +7,17 @@
             class="card shadow-2-strong card-registration"
             style="border-radius: 15px"
           >
+            <div class="flex justify-center">
+              <div
+                class="lg:w-[200px] lg:h-[200px] w-[150px] h-[150px] border-[1px] rounded-full m-6"
+              >
+                <img
+                  src="https://vnn-imgs-f.vgcloud.vn/2020/03/23/11/trend-avatar-1.jpg"
+                  class="object-cover w-full h-full rounded-full"
+                  alt=""
+                />
+              </div>
+            </div>
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Edit your infomation</h3>
 
@@ -105,16 +116,18 @@
               </div>
 
               <div class="mt-4 pt-2 d-flex justify-content-end">
-                <router-link
-                  class="btn btn-danger btn-lg me-2"
-                  :to="{ name: 'home', params: {} }"
-                  >Back To Home</router-link
+                <router-link :to="{ name: 'home', params: {} }"
+                  ><button
+                    class="btn btn-primary bg-white text-purple-600 px-4 border-[1px] border-purple-600 mr-4 rounded-lg hover:text-gray-400"
+                  >
+                    Back To Home
+                  </button></router-link
                 >
                 <button
-                  class="btn btn-primary btn-lg"
+                  class="btn btn-primary bg-purple-500 border-none hover:bg-purple-600 text-white px-4"
                   @click="EditInfomation()"
                 >
-                  Submit
+                  Save Changes
                 </button>
               </div>
             </div>
