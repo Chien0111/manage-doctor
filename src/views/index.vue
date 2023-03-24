@@ -83,11 +83,11 @@
       </h1>
       <h5>We want to bring you the best healthcare experience</h5>
     </div>
-    <div class="flex justify-center flex-wrap">
+    <div class="flex justify-center flex-wrap xl:py-[80px] xl:px-[180px]">
       <div
         v-for="item in dataService"
         :key="item"
-        class="flex items-center justify-around border-[1px] border-t-zinc-300 rounded-lg p-6 shadow-card w-[360px] m-4"
+        class="flex items-center justify-around border-[1px] border-t-zinc-300 rounded-lg p-6 shadow-card w-[360px] m-4 hover:bg-slate-300"
       >
         <div>
           <h1 class="font-medium text-2xl">{{ item.title }}</h1>
